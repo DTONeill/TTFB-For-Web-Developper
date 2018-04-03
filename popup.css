@@ -1,0 +1,12 @@
+body {
+    min-height: 100px;
+    min-width: 600px;
+}
+
+.separator {
+    padding-top: 100px;
+}
+
+[data-entry] {
+    padding: 10px;
+}

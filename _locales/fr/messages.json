@@ -1,0 +1,31 @@
+﻿{
+  "appName": {
+    "message": "seuil TTFB ",
+    "description": "TTFB pour les développeurs web"
+  },
+  "appDesc": {
+    "message": "Recevez facilement des notifications lorsque le temps de chargement de votre site développé devient trop lourd",
+    "description": "Vous permet de définir les seuils de façon à être notifié lorsque la page as dépassé la limite configuré."
+  },
+  "add": {
+    "message": "Ajouter"
+  },
+  "save": {
+    "message": "Sauvegarder"
+  },
+  "remove": {
+    "message": "Enlever"
+  },
+  "how_to_part1": {
+    "message": "Ajouter des url pour être notifié quand le temps de réception du premier octet dépassera la limite fixé."
+  },
+  "how_to_part2": {
+    "message": "Ex: https://www.google.com 200ms s'appliquera à toutes les pages commençant par https://www.google.com."
+  },
+  "threshold_reached": {
+    "message": "Limite atteinte"
+  },
+  "slower": {
+    "message": "plus lent"
+  }
+}

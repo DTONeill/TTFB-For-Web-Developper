@@ -1,0 +1,31 @@
+﻿{
+  "appName": {
+    "message": "TTFB threshold",
+    "description": "TTFB for web developper"
+  },
+  "appDesc": {
+    "message": "Easily get notifications when your developped site loading time get too heavy.",
+    "description": "Allows you to set the thresholds to be notified when the page has exceeded the configured limit."
+  },
+  "add": {
+    "message": "Add"
+  },
+  "save": {
+    "message": "Save"
+  },
+  "remove": {
+    "message": "Remove"
+  },
+  "how_to_part1": {
+    "message": "Add url to be notified when the first byte receive time exceeds the set limit."
+  },
+  "how_to_part2": {
+    "message": "Ex: https://www.google.com 200ms will apply to all pages starting with https://www.google.com."
+  },
+  "threshold_reached": {
+    "message": "Threshold reached"
+  },
+  "slower": {
+    "message": "slower"
+  }
+}
