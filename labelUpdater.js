@@ -4,6 +4,7 @@ class LabelUpdater {
         this.thresholdAchievedColor = "#FF0000";
         this.thresholdNotAchievedColor = "#228B22";
         this.noThresholdColor = "#1E90FF";
+        this.thresholdAlertId = "threshold-reached";
         
         chrome.runtime.onMessage.addListener(
             function (request, sender, sendResponse) {
@@ -16,8 +17,10 @@ class LabelUpdater {
         var currentHostConfig = this.getHostConfigurationsForTab(tab);
 
         var badgeColor = this.getBadgeDisplayColor(currentHostConfig, time);
-        if (badgeColor == this.thresholdAchievedColor) {
+        if (badgeColor === this.thresholdAchievedColor) {
             this.displayThresholdAlert(time, currentHostConfig.ttfb);
+        } else {
+            this.hideThresholdAlert();
         }
 
         chrome.browserAction.setBadgeText({ text: timeFormatted, tabId: tab.id });
@@ -41,10 +44,14 @@ class LabelUpdater {
         return null;
     }
 
+    hideThresholdAlert() {
+        chrome.notifications.clear(this.thresholdAlertId);
+    }
+
     displayThresholdAlert(time, threshold) {
         var difference = ((threshold - time) + "").replace("-", "");
         
-        chrome.notifications.create("threshold-reached", {
+        chrome.notifications.create(this.thresholdAlertId, {
             title: chrome.i18n.getMessage("threshold_reached") + " (" + threshold +"ms)",
             message: time + "ms (" + difference + "ms " + chrome.i18n.getMessage("slower") + ")",
             type: "basic",
