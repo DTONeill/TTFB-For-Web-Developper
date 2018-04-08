@@ -1,7 +1,7 @@
 {
   "short_name": "TTFB For Web Developper",
   "name": "TTFB For Web Developper",
-  "version": "0.0.1.0",
+  "version": "0.0.1.1",
   "description": "Easily get notifications when your developped site loading time get too heavy.",
   "author": "David O'Neill",
   "offline_enabled": false,
