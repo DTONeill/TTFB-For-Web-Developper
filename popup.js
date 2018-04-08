@@ -47,7 +47,7 @@ class Popup {
         newElement.find("[data-remove]").click(function () {
             newElement.hide("fast", function () {
                 newElement.remove();
-                if (that.getEntriesDisplayed().toArray().length == 0) {
+                if (that.getEntriesDisplayed().toArray().length === 0) {
                     that.displayHowTo();
                 }
             });
@@ -61,8 +61,7 @@ class Popup {
     loadSavedData() {
         this.$entriesContainer.empty();
         var hosts = localStorage["hosts"];
-        console.log("loadSavedData", hosts);
-        if (hosts && hosts != "[]") {
+        if (hosts && hosts !== "[]") {
             this.hideHowTo();
             var entries = JSON.parse(hosts);
             for (var i in entries) {

@@ -1,7 +1,7 @@
 {
   "short_name": "TTFB For Web Developper",
   "name": "TTFB For Web Developper",
-  "version": "0.0.0.3",
+  "version": "0.0.1.0",
   "description": "Easily get notifications when your developped site loading time get too heavy.",
   "author": "David O'Neill",
   "offline_enabled": false,
@@ -18,13 +18,13 @@
     }
   ],
   "icons": {
-    "16": "images/icon_16.png",
-    "32": "images/icon_48.png",
-    "48": "images/icon_48.png",
-    "128": "images/icon_128.png"
+    "16": "images/16icon.png",
+    "32": "images/32icon.png",
+    "48": "images/48icon.png",
+    "128": "images/128icon.png"
   },
   "browser_action": {
-    "default_icon": "images/icon_128.png",
+    "default_icon": "images/128icon.png",
     "default_popup": "popup.html"
   },
   "manifest_version": 2

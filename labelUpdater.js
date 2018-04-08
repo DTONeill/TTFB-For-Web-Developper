@@ -49,13 +49,13 @@ class LabelUpdater {
     }
 
     displayThresholdAlert(time, threshold) {
-        var difference = ((threshold - time) + "").replace("-", "");
+        var difference = (threshold - time).toString().replace("-", "");
         
         chrome.notifications.create(this.thresholdAlertId, {
-            title: chrome.i18n.getMessage("threshold_reached") + " (" + threshold +"ms)",
+            title: chrome.i18n.getMessage("threshold_reached") + " (" + threshold + "ms)",
             message: time + "ms (" + difference + "ms " + chrome.i18n.getMessage("slower") + ")",
             type: "basic",
-            iconUrl: "/images/icon_128.png"
+            iconUrl: "/images/128icon.png"
         });
     }
 
